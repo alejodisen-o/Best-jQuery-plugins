@@ -83,7 +83,7 @@
 Links plugin
 */
 #links-list{}
-#links-list li{//display: none;}
+#links-list li{display: none;}
 #auth{}
 #demo{}
 #down{}
