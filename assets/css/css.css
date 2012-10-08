@@ -100,4 +100,7 @@ div.addthis_toolbox {
   margin:0 auto;
 }
 
-#logo-w{text-align: center;}
+#logo-w{
+	margin-top:1em;
+	text-align: center;
+}
