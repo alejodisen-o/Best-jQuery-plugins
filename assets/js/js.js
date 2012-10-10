@@ -15,6 +15,26 @@
  *
  */
 
+// Ready
+$(function(){
+  // Custom Accordion
+  $('.accordion.collapsible li .title').click(function(){
+    var $thisLi = $(this).parent('li');
+
+    if($thisLi.hasClass('active')){
+      var accordion = $thisLi;
+      accordion.find('.content').slideUp(function(){
+        accordion.removeClass('active');
+      });
+    }else{
+      $thisLi.siblings().removeClass('active').find('.content').slideUp();
+      $thisLi.find('.content').slideDown('slow');
+      $thisLi.addClass('active');  
+    }    
+  });
+});
+
+// Load
 $(window).load(function() {
   //
   // 0. Defaults
@@ -30,7 +50,15 @@ $(window).load(function() {
   // 1. Initialization
   // ----------------------------------------------------------------------
   // 1.1 xxx
-  $('.side-nav').foundationAccordion();
+
+  
+
+  $('#w-menu-izq-wrapper').find('a').each(function(){
+    if($(this).attr('href')===document.URL){
+      $(this).closest('.w-submenu-wrapper').prev('.w-menu-lvl1').click();
+      return false;
+    }
+  });
 
   //
   // 2. Fn

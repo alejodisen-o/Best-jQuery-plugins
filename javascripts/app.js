@@ -6,7 +6,7 @@
 
   
   $.fn.foundationAlerts           ? $doc.foundationAlerts() : null;
-  $.fn.foundationAccordion        ? $doc.foundationAccordion() : null;
+  //$.fn.foundationAccordion        ? $doc.foundationAccordion() : null;
   $.fn.foundationTooltips         ? $doc.foundationTooltips() : null;
   $('input, textarea').placeholder();
   
