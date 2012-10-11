@@ -32,6 +32,9 @@ $(function(){
       $thisLi.addClass('active');  
     }    
   });
+
+  // Reload welcome
+  $("#iFrame-plugin").attr("src",'welcome.html');
 });
 
 // Load
@@ -52,13 +55,13 @@ $(window).load(function() {
   // 1.1 xxx
 
   
-
+/*
   $('#w-menu-izq-wrapper').find('a').each(function(){
     if($(this).attr('href')===document.URL){
       $(this).closest('.w-submenu-wrapper').prev('.w-menu-lvl1').click();
       return false;
     }
-  });
+  });*/
 
   //
   // 2. Fn
@@ -98,7 +101,7 @@ $(window).load(function() {
   //
   // 3. Events
   // ----------------------------------------------------------------------
-  // 3.1 xxx
+  // 3.1 Links behaviour
   $("a").click(function(e){
     if($(this).attr("target")!=="_blank"){
       e.preventDefault();      
@@ -114,6 +117,7 @@ $(window).load(function() {
     }
   });
 
+  // iFrame load complete
   $('#iFrame-plugin').load(function(){
       $("#loading-msg").fadeOut();
   });
