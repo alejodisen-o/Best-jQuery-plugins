@@ -10,8 +10,7 @@
  * Document Ready
  * --------------
  * 1. Custom Accordion
- * 2. Reload welcome
- * 3. Tooltips
+ * 2. Tooltips
  *
  * Window Load
  * -----------
@@ -49,10 +48,7 @@ $(function(){
     }    
   });
 
-  // 2. Reload welcome
-  $("#iFrame-plugin").attr("src",'welcome.html');
-
-  // 3. Tooltips
+  // 2. Tooltips
   $('#links-list img').qtip({
     content: {
       attr: 'alt'
@@ -63,10 +59,19 @@ $(function(){
     position: {
       at:"top center",my:"bottom center"
     }
-  })
+  });
+
+  var flagIframeReloaded = false;
+
+  $('#reload').click(function() {
+    document.location.reload(true);
+    flagIframeReloaded = true;
+  });
+
+  if(!flagIframeReloaded){
+    $('#reload').click();
+  }
 });
-
-
 
 // Window Load
 $(window).load(function() {
@@ -136,7 +141,7 @@ $(window).load(function() {
 
   // 3.2 iFrame Load
   $('#iFrame-plugin').load(function(){
-    $("#loading-msg").fadeOut();
+    $("#loading-msg").fadeOut(); 
   });
 
 });
