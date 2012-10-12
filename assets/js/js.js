@@ -127,6 +127,7 @@ $(window).load(function() {
         $linksList.find('li').css({'display':'none'});
         makeLinks($(this));
 
+        $('html, body').animate({scrollTop:0}, 'slow');
         $("#loading-msg").fadeIn();
         $("#iFrame-plugin").attr("src",$(this).attr("href"));
       }
