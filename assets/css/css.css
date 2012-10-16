@@ -81,7 +81,7 @@
 }
 
 /*
-Links plugin
+	Plugin Links
 */
 #links-list{}
 #links-list li{display: none;}
@@ -106,3 +106,7 @@ div.addthis_toolbox {
 	margin-top:1em;
 	text-align: center;
 }
+
+/* social buttons */
+#social-c{text-align:center;}
+#github-c{margin:0 auto 1em auto;}
